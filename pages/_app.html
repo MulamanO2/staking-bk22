@@ -1,0 +1,17 @@
+document.writeln("import type { AppProps } from \"next/app\";");
+document.writeln("import { ChainId, ThirdwebProvider } from \"@thirdweb-dev/react\";");
+document.writeln("import \"../styles/globals.css\";");
+document.writeln("");
+document.writeln("// This is the chainId your dApp will work on.");
+document.writeln("const activeChainId = ChainId.Polygon;");
+document.writeln("");
+document.writeln("function MyApp({ Component, pageProps }: AppProps) {");
+document.writeln("  return (");
+document.writeln("    <ThirdwebProvider desiredChainId={activeChainId}>");
+document.writeln("      <Component {...pageProps} />");
+document.writeln("    </ThirdwebProvider>");
+document.writeln("  );");
+document.writeln("}");
+document.writeln("");
+document.writeln("export default MyApp;");
+document.writeln("");
